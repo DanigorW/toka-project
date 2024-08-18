@@ -1,0 +1,19 @@
+.box-shadow {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    /* Darker shadow */
+}
+
+.router-link-exact-active {
+    color: #4BE1C4;
+}
+
+.cursor-p {
+    cursor: pointer;
+}
+
+.cut-text {
+    text-overflow: ellipsis;
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
+}
