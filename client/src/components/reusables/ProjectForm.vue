@@ -46,9 +46,6 @@ export default {
             projectInfo: {
                 name: '',
                 description: '',
-                tasks: [{
-                name: ''
-            }],
             },
         };
     },

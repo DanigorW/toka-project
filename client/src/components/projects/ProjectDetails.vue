@@ -10,9 +10,15 @@ import {
     mapGetters
 } from "vuex";
 import projectForm from "@/mixins/projectForm"
+import sokets from "@/mixins/sokets"
 export default {
     name: "ProjectDetails",
-    mixins: [projectForm],
+    mixins: [projectForm,sokets],
+    data(){
+        return { 
+            soketModel:'Project'
+        }
+    },
 
     computed: {
         ...mapGetters(["GET_CURRENT_PROJECT"])

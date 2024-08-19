@@ -18,10 +18,11 @@ export default {
             console.log("Inside DELETE_PROJECT - payload", payload);
             state.projects.splice(payload, 1)
         },
-        UPDATE_PROJECT(state, payloadObj) {
-            console.log("Inside UPDATE_PROJECT - payload", payloadObj);
-            const { projectIndex, payload } = payloadObj;
-            Vue.set(state.projects, projectIndex, {...state.projects[projectIndex], ...payload.data });
+
+        UPDATE_PROJECT(state, { projectIndex, payload }) {
+            // Replace the existing project data with the updated data
+            console.log("Inside UPDATE_PROJECT - payload", payload);
+            Vue.set(state.projects, projectIndex, payload);
         },
         ADD_NEW_PROJECT(state, payload) {
             console.log("Inside ADD_NEW_PROJECT - state, payload", state, payload)

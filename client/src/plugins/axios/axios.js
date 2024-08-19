@@ -16,6 +16,7 @@ instance.interceptors.response.use(
         // Handle successful responses + Notification popups
         const operationContext = response.config.headers['X-Operation-Context'];
 
+
         if (response.status === 200) {
             if (operationContext === 'add') {
                 showNotification('add', 'success')
@@ -23,8 +24,6 @@ instance.interceptors.response.use(
                 showNotification('update', 'success')
             } else if (operationContext === 'delete') {
                 showNotification('delete', 'success')
-            } else {
-                showNotification('default', 'success')
             }
         }
         store.commit('SET_IS_LOADING', false); // Hide loading spinner
